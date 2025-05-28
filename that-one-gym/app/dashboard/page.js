@@ -16,13 +16,18 @@ export default function Home() {
             onClick={() => handleClick('/')}
             className="font-inter font-extrabold text-blue-600 cursor-pointer"
         >THAT ONE GYM</button>
+        <h1 className="font-inter font-extrabold text-blue-600">Admin</h1>
       </nav>
       <main className="flex flex-row items-center justify-center w-full h-full p-4 bg-white">
-        <button 
-            className="font-inter text-left cursor-pointer"
-            onClick ={() => handleClick('/dashboard')}
-          >Admin Dashboard</button>
-      </main> 
+        <div className="flex flex-col w-1/4 h-full">
+          <button className="font-inter text-left cursor-pointer h-12" >Dashboard</button>
+          <button className="font-inter text-left cursor-pointer h-12">Gyms</button>
+          <button className="font-inter text-left cursor-pointer h-12">Equipment</button>        
+        </div>
+        <div className="flex flex-col items-center justify-center w-3/4 h-full">
+        
+        </div>
+      </main>
     </div>
   );
 }
