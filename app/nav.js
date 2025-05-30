@@ -9,6 +9,10 @@ export default function Nav(handleClick) {
                 onClick={() => router.push('/')}
                 className="font-inter font-extrabold text-blue-600 cursor-pointer"
             >THAT ONE GYM</button>
+            <button 
+                className="font-inter text-black text-left cursor-pointer"
+                onClick ={() => router.push('/dashboard')}
+            >Owner Login</button>
         </nav>
     );
 }
