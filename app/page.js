@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Nav from './nav';
 
 export default function Home() {
   const router = useRouter()
@@ -11,15 +12,10 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-white">
-      <nav className="flex flex-row justify-between w-full p-4 bg-gray-100">
-        <button 
-            onClick={() => handleClick('/')}
-            className="font-inter font-extrabold text-blue-600 cursor-pointer"
-        >THAT ONE GYM</button>
-      </nav>
+      <Nav/>
       <main className="flex flex-row items-center justify-center w-full h-full p-4 bg-white">
         <button 
-            className="font-inter text-left cursor-pointer"
+            className="font-inter text-black text-left cursor-pointer"
             onClick ={() => handleClick('/dashboard')}
           >Admin Dashboard</button>
       </main> 
