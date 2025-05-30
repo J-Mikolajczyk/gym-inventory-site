@@ -1,23 +1,18 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { React, useState, useEffect, use } from 'react';
 import Nav from './nav';
+import Map from './map';
 
 export default function Home() {
-  const router = useRouter()
-
-  const handleClick = (link) => {
-    router.push(link);
-  }
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-white">
       <Nav/>
-      <main className="flex flex-row items-center justify-center w-full h-full p-4 bg-white">
-        <button 
-            className="font-inter text-black text-left cursor-pointer"
-            onClick ={() => handleClick('/dashboard')}
-          >Admin Dashboard</button>
+      <main className="flex flex-row justify-center w-full h-full p-4 bg-white">
+        <div className="w-7/8 h-1/2">
+          <Map/>
+        </div>
       </main> 
     </div>
   );
