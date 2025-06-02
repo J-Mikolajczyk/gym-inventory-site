@@ -7,24 +7,8 @@ const foursquareApiKey = process.env.NEXT_PUBLIC_FOURSQUARE_API_KEY;
 export default function Map() {
     const mapContainerRef = useRef(null);
     const mapRef = useRef(null);
-    const [gyms, setGyms] = useState([]);
     const[location, setLocation] = useState({ latitude: 38, longitude: -95 });
     const [zoom, setZoom] = useState(2.8);
-
-    const fetchGyms = async () => {
-        try {
-            const response = await fetch(`https://api.foursquare.com/v3/places/search?ll=${location.latitude},${location.longitude}&radius=1000&query=gym`, {
-                headers: {
-                    'Accept': 'application/json',
-                    'Authorization': foursquareApiKey,
-                },
-            });
-            const data = await response.json();
-            setGyms(data.results);
-        } catch (error) {
-            console.error("Error fetching gyms:", error);
-        }
-    };
 
     useEffect(() => {
         mapRef.current = new mapboxgl.Map({
@@ -33,8 +17,6 @@ export default function Map() {
             center: [location.longitude, location.latitude],
             zoom: zoom,
         });
-
-        fetchGyms();
 
         return () => {
             if (mapRef.current) {
@@ -51,10 +33,10 @@ export default function Map() {
                     latitude: position.coords.latitude,
                     longitude: position.coords.longitude,
                 });
-                ;
+                setZoom(12)
             });
         }
-        setZoom(12)
+
     }, []);
 
     return (
