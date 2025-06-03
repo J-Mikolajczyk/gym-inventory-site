@@ -15,7 +15,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center h-screen bg-white">
       <Nav/>
       <main className="flex flex-row items-center justify-center w-full h-full p-4 bg-white">
-        <div className="flex flex-col w-1/8 h-full">
+        <div className="flex flex-col w-1/8 min-w-30 h-full">
           <button className={`border-r-1 font-inter text-black text-left cursor-pointer h-12 + ${section === 'dashboard' ? 'border-r-8 border-r-blue-600'  : 'border-r-0'}`} onClick={() => handleSectionChange('dashboard')}>Dashboard</button>
           <button className={`border-r-1 font-inter text-black text-left cursor-pointer h-12 + ${section === 'gyms' ? 'border-r-8 border-r-blue-600'  : 'border-r-0'}`} onClick={() => handleSectionChange('gyms')}>Gyms</button>
           <button className={`border-r-1 font-inter text-black text-left cursor-pointer h-12 + ${section === 'equipment' ? 'border-r-8 border-r-blue-600'  : 'border-r-0'}`} onClick={() => handleSectionChange('equipment')}>Equipment</button>        
