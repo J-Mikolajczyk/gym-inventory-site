@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 export async function POST(req) {
 
   const body = await req.json();
+  const gymData = body;
   const { name, address, city, state, zip, phone } = body;
 
   try {
