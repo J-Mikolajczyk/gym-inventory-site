@@ -45,7 +45,7 @@ export default function Home() {
           state: 'CA',
           zip: '12345',
           phone: '555-555-5555'
-        })} className="w-1/4 font-inter cursor-pointer bg-gray-200 border-1 rounded p-1">Can't find gym? Add it here.</button>
+        })} className="w-1/4 font-inter cursor-pointer bg-gray-200 border-1 rounded p-1">Can&apos;t find gym? Add it here.</button>
       </div>
     </div>
   );

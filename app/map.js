@@ -17,7 +17,7 @@ export default function Map() {
             center: [location.longitude, location.latitude],
             zoom: zoom,
         });
-    }, []);
+    }, [[location.latitude, location.longitude, zoom]]);
 
     useEffect(() => {
         if (mapRef.current) {
