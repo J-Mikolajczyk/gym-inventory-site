@@ -12,6 +12,7 @@
     "@api/fsq-developers": "file:.api/apis/fsq-developers",
     "@auth0/nextjs-auth0": "^4.6.1",
     "@foursquare/foursquare-places": "^1.0.3",
+    "@headlessui/react": "^2.2.4",
     "@mapbox/mapbox-gl-geocoder": "^5.0.3",
     "@mapbox/search-js-react": "^1.1.0",
     "google-map-react": "^2.2.5",
